@@ -12,7 +12,7 @@ body {
   background-color: #e5e5e5;
   color: #fff;
   font-family: 'Open Sans';
-  margin: auto;
+  margin: 0 auto;
   max-width: 1440px;
 }
 
@@ -39,7 +39,6 @@ h5 {
   font-size: 16px;
   line-height: 21px;
 }
-
 
 .secondary-text {
   font-weight: normal;
@@ -106,13 +105,18 @@ nav {
 }
 
 .avatar {
-  border: 1px solid #56700F;
+  border: 2px solid #56700F;
   border-radius: 50%;
   overflow: hidden;
-  width: 102px;
-  height: 102px;
-  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  margin: auto;
 
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
 }
 
 
@@ -128,35 +132,28 @@ nav {
     margin-top: 100px;
     position: relative;
   }
-
-
-
-  .content-img.entrance-doors
-  {
-    position: absolute;
-    right: 0px;
-    top: -30px;
-    height: 630px;
+  
+  .content-img.entrance-doors {
+     position: absolute;
+     right: 0px;
+     transform: scale(1, 1.1);
   }
 
-  .content-img.interior-doors
-  {
-    position: absolute;
-    left: 0px;
-    top: -30px;
-    height: 630px;
-  }
-
-  #interior-doors .description-container {
-    padding-left: 710px;
+  .content-img.interior-doors {
+     position: absolute;
+     left: 0px;
+     transform: scale(1, 1.1);
   }
 
   .content-img.terrace-doors
   {
     position: absolute;
     right: 0px;
-    top: -30px;
-    height: 630px;
+    transform:  scale(1, 1.1)
+  }
+
+  #interior-doors .description-container {
+    padding-left: 710px;
   }
 
   .map-widget {
@@ -167,7 +164,7 @@ nav {
 
   .nav-item:hover {
     background-color: #2A1D17;
-    border-radius: 2px;
+    border-radius: 5px;
   }
 }
 
@@ -185,13 +182,6 @@ nav {
 }
 
 .feedbacks {
-  width: 768px;
-  margin-top: 20px;
-  margin-bottom: 100px;
-}
-
-
-.feedbacks {
     background-color: #FEFEFE;
     width: 1240px;
     margin: 100px auto;
@@ -207,8 +197,6 @@ nav {
     padding-bottom: 50px;
     margin: 0 25px;
 }
-
-
 
 .feedbacks h1 {
     font: bold 36px Open-sans, sans-serif;
@@ -267,17 +255,13 @@ nav {
   margin-left: 40px
 }
 
-
-.slider-track {
-  display: flex;
+.slider-item {
+    display: flex;
+    min-width: 100%;
+    height: 600px;
 }
 
 .slider-item {
-  min-width: 100%;
-  height: 600px;
-}
-
-#main-slider .slider-item {
   background: url(../img/books.jpg) no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.29);
@@ -308,40 +292,19 @@ nav {
 }
 
 
-button:active,
+/*button:active,
 button:focus {
   outline: none
 }
-
-.btn {
+*/
+/*.btn {
   margin: 0 30px;
   height: 0;
   width: 0;
   background-color: rgba(0, 0, 0, 0);
   border: 20px solid transparent;
   cursor: pointer;
-}
-
-.btn:disabled {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.btn-next {
-  border-left: 20px solid rgba(135, 134, 134, 0.7)
-}
-
-.btn-next:hover {
-  border-left-color: rgb(202, 195, 195)
-}
-
-.btn-prev {
-  border-right: 20px solid rgba(135, 134, 134, 0.7)
-}
-
-.btn-prev:hover {
-  border-right-color: rgb(202, 195, 195)
-}
+}*/
 
 .review-wrapper {
   margin: 100px auto;
@@ -434,13 +397,13 @@ button:focus {
   align-items: center;
   color: white;
   background-color: #2A1D17;
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .submit-btn:hover {
-  color: black;
-  background-color: rgb(238, 234, 234);
+  color: #211611;
+  background-color: #DEAE83;
 }
 
 input[type="submit"].submit-btn {
@@ -506,33 +469,24 @@ input[type="submit"].submit-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 124, 124, 0.238);
+  background-color: #d89393;
   border-radius: 50%;
   cursor: pointer;
-  visibility: hidden;
-  transform: translateY(20px);
-  z-index: 3;
 }
 
-.scroll-up.active {
-  opacity: .5;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-up.active:hover {
+.scroll-up:hover {
   opacity: 1;
   transform: scale(1.2);
-  background-color: rgba(249, 114, 114, 0.547);
+  background-color: #d05050;
 }
 
 .scroll-up::before {
   content: '';
   width: 0;
   height: 0;
-  border: 10px solid transparent;
+  border: 12px solid transparent;
   border-bottom-color: white;
-  transform: translateY(-5px);
+  transform: translateY(-7px);
 }
 
 .footer-text_container .footer-text .footer-icon:hover {
